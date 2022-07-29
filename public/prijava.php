@@ -45,7 +45,7 @@ try  {
 <?php require "templates/header.php"; ?>
 <div class="w3-container">
 <?php if (isset($_POST['submit']) && $statement) { ?>
-<p class="w3-panel w3-deep-orange w3-round"><strong><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a</strong></p>
+<p class="w3-panel w3-brown w3-round"><strong><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a</strong></p>
 <?php } ?>
 
 <form name="form_prijava" onsubmit="return provera()" method="post" >
