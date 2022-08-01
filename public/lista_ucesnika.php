@@ -20,7 +20,7 @@
      <th style="width:150px">Vreme prijave</th>
    </tr>
 <?php
-require "../db.conf.php";
+require "../config.php";
 require "../common.php";
 
 // Create connection
