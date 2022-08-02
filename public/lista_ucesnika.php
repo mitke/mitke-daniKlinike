@@ -1,6 +1,5 @@
 <?php require "templates/header.php"; ?>
 
-<!--<table style="color: #d96459; padding: 2px; cellspacing: 2; border-spacing: 3px;"> -->
 <div class="w3-container">
 <table class="w3-table-all" style="font-size: 12px;">
   <thead>
@@ -40,12 +39,12 @@ foreach( $zan as $z ) {
  $result = $conn->query($sql);
  $result_01 = $conn->query($sql_01);
  $zbr = $result_01->fetch_assoc();
-// echo $zbr['total']; 
+
  if ($result->num_rows > 0) {
     // output data of each row
     $i = 1;
     echo "<tr class='w3-orange w3-text-brown'><td colspan='15'><strong>".$z."(".$zbr['total'].")".":</strong></td></tr>";
-//    echo "<tr><td colspan='8'><strong>".$z.":</strong></td></tr>";
+
     while($row = $result->fetch_assoc()) {
         echo "<tr><td align='right'>".$i++.
 	     "</td><td>".$row["ime"]. 
@@ -65,9 +64,9 @@ foreach( $zan as $z ) {
              "</tr></td>";
     }
  } 
- /* else {
+  else {
     echo "0 results";
- } */
+ } 
 }
 $conn->close();
 ?>
