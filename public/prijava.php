@@ -43,6 +43,7 @@ try  {
 ?>
 
 <?php require "templates/header.php"; ?>
+
 <div class="w3-container">
 <?php if (isset($_POST['submit']) && $statement) { ?>
 <p class="w3-panel w3-brown w3-round"><strong><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a</strong></p>
@@ -50,7 +51,7 @@ try  {
 
 <form name="form_prijava" onsubmit="return provera()" method="post" >
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0" 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td colspan="3"><div class="w3-panel w3-orange w3-round-large"><h3>Prijava učesnika za dane Univerzitetske dečje klinike 2022.</h3></div> </td>
   </tr>
@@ -68,7 +69,7 @@ try  {
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
     <td width="220"><input class="w3-input w3-border" name="prezime" type="text" placeholder="Prezime">
-    	<input name="zanimanje" type="hidden" size="30" value="doktori"></td>
+    	              <input name="zanimanje" type="hidden" size="30" value="doktori"></td>
     <td>*</td>
   </tr>
   <tr>
@@ -101,6 +102,7 @@ try  {
     <td width="220">&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
+
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">Način plaćanja:&nbsp;</td>
     <td width="220" style="text-align: left"><input type="radio" id="licno" name="placanje" value="lično"> <label class="w3-text-brown" for="licno">lično</label></td>
@@ -159,21 +161,19 @@ try  {
   </tr>
   <tr>
     <td colspan="3">
-        <div class="w3-panel w3-orange w3-round-large">
+      <div class="w3-panel w3-orange w3-round-large">
 		   <h5> <strong>INFORMACIJE O PLAĆANJU</strong></h5>
 		   <p>Glavni program: 9600 dinara (u cenu je uračunat i PDV)<br />
-                  
-                      Uplate za učešće u programima možete izvršiti na
-                      <strong> žiro račun: 840 – 629667 - 08, sa pozivom na broj: 24L, </strong>
-                      svrha uplate: „kotizacija za osnovni program“.</p>
-                  <p><strong>Za učesnike iz regiona kotizacija se plaća na licu mesta.</strong></p>
-	          <p>Tehnička podrška za uplate kotizacija:<br />
-		     referent Jasna Pavlović:  011/20 60 655, e-mail:jasna.pavlovic@udk.bg.ac.rs<br />
-                     Kontakt e-mail: dani2021@udk.bg.ac.rs</p>
-	</div>
+          Uplate za učešće u programima možete izvršiti na<strong> žiro račun:</strong> 840 – 629667 - 08, <strong>poziv na broj:</strong> 24L, 
+          <strong>svrha uplate:</strong> „kotizacija za osnovni program“.</p>
+        <p>Za učesnike iz regiona kotizacija se plaća na licu mesta.</strong></p>
+	      <p><strong>Tehnička podrška za uplate kotizacija:</strong><br />
+		    referent Jasna Pavlović:  011/20 60 655, e-mail:jasna.pavlovic@udk.bg.ac.rs</p>
+        <p><strong>Kontakt e-mail:</strong> dani2022@udk.bg.ac.rs</p>
+	    </div>
     </td>
   </tr>
-  <tr>
+<tr>
     <td colspan="3">&nbsp;</td>
   </tr>
   
@@ -181,7 +181,6 @@ try  {
     <td colspan="3">&nbsp;</td>
   </tr>
 </table>
-
 
 </form>
 <!-- <a href="index.php">Back to home</a> -->

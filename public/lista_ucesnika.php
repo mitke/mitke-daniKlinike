@@ -1,15 +1,17 @@
 <?php require "templates/header.php"; ?>
 
 <!--<table style="color: #d96459; padding: 2px; cellspacing: 2; border-spacing: 3px;"> -->
-<table style="color: #d96459; border-spacing: 2px;">
-   <tr align='left'>
+<div class="w3-container">
+<table class="w3-table-all" style="font-size: 12px;">
+  <thead>
+   <tr class="w3-brown">
      <th>r.br.</th>
      <th>Ime</th>
      <th>Prezime</th>
-     <th style="width:100px;">Broj licence</th>
-     <th style="width:250px">Ustanova</th>
-     <th style="width:200px">Adresa</th>
-     <th style="width:150px">Telefon</th>
+     <th>Broj licence</th>
+     <th>Ustanova</th>
+     <th>Adresa</th>
+     <th>Telefon</th>
      <th>E-mail</th>
      <th>Plaćanje</th>
      <th>Rad.1</th>
@@ -17,8 +19,9 @@
      <th>Rad.3</th>
      <th>Rad.4</th>
      <th>kurs</th>
-     <th style="width:150px">Vreme prijave</th>
+     <th>Vreme prijave</th>
    </tr>
+  </thead> 
 <?php
 require "../config.php";
 require "../common.php";
@@ -41,7 +44,7 @@ foreach( $zan as $z ) {
  if ($result->num_rows > 0) {
     // output data of each row
     $i = 1;
-    echo "<tr><td colspan='8'><br /><strong>".$z."(".$zbr['total'].")".":</strong></td></tr>";
+    echo "<tr class='w3-orange w3-text-brown'><td colspan='15'><strong>".$z."(".$zbr['total'].")".":</strong></td></tr>";
 //    echo "<tr><td colspan='8'><strong>".$z.":</strong></td></tr>";
     while($row = $result->fetch_assoc()) {
         echo "<tr><td align='right'>".$i++.
@@ -61,12 +64,14 @@ foreach( $zan as $z ) {
 	     "</td><td>".$row["date"].
              "</tr></td>";
     }
- } else {
+ } 
+ /* else {
     echo "0 results";
- }
+ } */
 }
 $conn->close();
 ?>
 
 </table>
+</div>
 <?php require "templates/footer.php"; ?>

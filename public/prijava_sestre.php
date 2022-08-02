@@ -7,7 +7,7 @@
  */
 
 if (isset($_POST['submit'])) {
-    require "../db.conf.php";
+    require "../config.php";
     require "../common.php";
 
 try  {
@@ -39,128 +39,114 @@ try  {
 
 <?php require "templates/header.php"; ?>
 
+<div class="w3-container">
 <?php if (isset($_POST['submit']) && $statement) { ?>
-<p class="slova2"><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a.</p>
+<p class="w3-panel w3-brown w3-round"><strong><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a.</p></strong>
 <?php } ?>
 
 <form name="form_prijava" onsubmit="return provera()" method="post" >
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr><td colspan="3" class="naslov_sestre">PRIJAVA UČESNIKA ZA DANE UNIVERZITETSKE DEČJE KLINIKE 2021. </td>
-</tr>
-<tr>
-<td width="90" class="text_sestre">&nbsp;</td>
-<td width="5">&nbsp;</td>
-<td width="520">&nbsp;</td>
-</tr>
-<tr>
-<td width="90" class="text_sestre">Ime : </td>
-<td width="5" height="5">&nbsp;</td>
-<td><input name="ime" type="text" size="30">
-*</td>
-</tr>
-<tr>
-<td width="90" class="text_sestre">Prezime : </td>
-<td width="5">&nbsp;</td>
-<td><input name="prezime" type="text" size="30">
-<input name="zanimanje" type="hidden" size="30" value="sestre">
-*</td>
-</tr>
-<tr>
-<td width="90" class="text_sestre">Ustanova : </td>
-<td width="5">&nbsp;</td>
-<td><input name="ustanova" type="text" size="30"> *</td>
-</tr>
-<tr>
-<td width="90" class="text_sestre">Adresa : </td>
-<td width="5">&nbsp;</td>
-<td><input name="adresa" type="text" size="30"> *</td>
-</tr>
-<tr>
-<td width="90" class="text_sestre">Telefon : </td>
-<td width="5">&nbsp;</td>
-<td><input name="telefon" type="text" size="30"> *   </td>
-</tr>
-<tr>
-<td width="90" class="text_sestre">e-mail adresa : </td>
-<td width="5">&nbsp;</td>
-<td><input name="email" type="text"size="30"> *   </td>
-</tr>
-<tr>
-    <td width="90" class="text_sestre">Prijava za kurs (do 50 učesnika)</td>
-    <td width="5">&nbsp;</td>
-    <td><input type="checkbox" name="kurs" value="+"></td>
-</tr>
-
-<!--
- <tr><td>&nbsp;</td><td>&nbsp;</td><td>Radionica 1 - Neonatalna hirurgija: najčešće ambulantne intervencije: </td></tr>
-
- <tr><td>&nbsp;</td><td>&nbsp;</td><td>Radionica 2 - Morbili: prepoznavanje i zbrinjavanje komplikacija i rizičnih grupa bolesnika</td></tr>
-
- </td>
-
   <tr>
-    <td width="90" class="text_sestre">Petak radionice<br /> (SAMO jedna) 3 ili 4 : </td>
-    <td width="5">&nbsp;</td>
-    <td><input name="dani" type="text" id="txtIme11" size="30"></td>
+    <td colspan="3"><div class="w3-panel w3-orange w3-round-large"><h3>Prijava učesnika za dane Univerzitetske dečje klinike 2022.</h3></div> </td>
   </tr>
- <tr><td>&nbsp;</td><td>&nbsp;</td><td>Radionica 3 - Alergologija: savremeni principi za dijagnostiku i lečenje alergija kod dece </td></tr>
-
-  <tr><td>&nbsp;</td><td>&nbsp;</td><td>Radionica 4 - Epileptologija: dileme u dijagnostici, lečenju i praktičnom savetovanju roditelja </td></tr>
-
- <tr>
-    <td width="90" align="right">&nbsp; </td>
-    <td width="5">&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
--->
+  
   <tr>
-    <td width="90" align="right">&nbsp;</td>
-    <td width="5">&nbsp;</td>
-
-    <td><span class="text_sestre_dno"><strong>Polja označena * su obavezna.</strong><br /> Prijavu <strong>OBAVEZNO </strong> popuniti latinicom </span></td>
-  </tr>
-<!--
-  <tr>
-    <td width="90" align="right">&nbsp; </td>
-    <td width="5">&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
--->
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class="text_sestre_dno"><input name="submit" type="submit" value="Pošalji">
-      <input name="btnReset" type="reset" id="btnReset2" value="Obriši"></td>
+    <td width="20" class="w3-right-align">&nbsp;</td>
+    <td width="220">&nbsp;</td>
+    <td width="220">&nbsp;</td>
   </tr>
   <tr>
-    <td width="90">&nbsp;</td>
-    <td width="5">&nbsp;</td>
+    <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
+    <td width="220"><input class="w3-input w3-border" name="ime" type="text" placeholder="Ime"></td>
+    <td>*</td>
+  </tr>
+  <tr>
+    <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
+    <td width="220"><input class="w3-input w3-border" name="prezime" type="text" placeholder="Prezime">
+                    <input name="zanimanje" type="hidden" size="30" value="sestre"></td>
+    <td>*</td>
+  </tr>
+   <tr>
+    <td width="20" class="w3-right-align w3-text-brown">&nbsp; </td>
+    <td width="220"><input class="w3-input w3-border" name="ustanova" type="text" placeholder="Ustanova"> </td>
+    <td>*</td>
+  </tr>
+  <tr>
+    <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
+    <td width="220"><input class="w3-input w3-border" name="adresa" type="text" placeholder="Adresa"> </td>
+    <td>*</td>
+  </tr>
+  <tr>
+    <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
+    <td width="220"><input class="w3-input w3-border" name="telefon" type="text" placeholder="Telefon"></td>
+    <td>*</td>
+  </tr>
+  <tr>
+    <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
+    <td width="220"><input class="w3-input w3-border" name="email" type="text" placeholder="e-mail adresa"></td>
+    <td>*</td>
+  </tr>
+  <tr>
+    <td width="20">&nbsp;</td>
+    <td width="220">&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
-  <tr class="style3">
+  <tr>
+    <td  width="20" class="w3-right-align w3-text-brown">Prijava za kurs (do 50 učesnika)&nbsp;</td>
+    <td  width="220" style="text-align: left"><input type="checkbox" name="kurs" value="+"></td>
+  </tr>
+  <tr>
+    <td width="20">&nbsp;</td>
+    <td width="220">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20" class="w3-right-align">&nbsp;</td>
+    <td><div class="w3-panel w3-orange w3-round-large"><p><strong>Polja označena * su obavezna.</strong><br /> Prijavu <strong>OBAVEZNO </strong> popuniti latinicom </p></div></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20" class="w3-right-align">&nbsp; </td>
+    <td width="220">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;<input class="w3-button w3-round w3-deep-orange w3-hover-brown" name="submit" type="submit" value="Pošalji">
+      <input class="w3-button w3-round w3-deep-orange w3-hover-brown" name="btnReset" type="reset" id="btnReset2" value="Obriši"></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20">&nbsp;</td>
+    <td width="220">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
     <td colspan="3">
-		   <p><strong>INFORMACIJE O PLAĆANJU</strong>
-		   <br />Glavni program simpozijuma: 2000 dinara (u cenu je uračunat i PDV) - Uplate na žiro račun: 840 – 629667 - 08, sa pozivom na broj: S2021<br /> 
-		   Kotizacija za kurs: 1500 dinara (u cenu je uračunat i PDV) - Uplate na žiro račun: 840 – 629667 - 08, sa pozivom na broj: SK2021</p> 
-       <p><strong>Za učesnike iz regiona kotizacija se plaća na licu mesta.</strong></p>
-	           <p><strong>Tehnička podrška za uplate kotizacija:</strong><br />
-		   referent Jasna Pavlović:  011/20 60 655, e-mail:jasna.pavlovic@udk.bg.ac.rs</p>
-                   <p>Ostale informacije: dani2021@udk.bg.ac.rs</p>
-
+      <div class="w3-panel w3-orange w3-round-large">
+		   <h5> <strong>INFORMACIJE O PLAĆANJU</strong></h5>
+		   <p>Glavni program: 9600 dinara (u cenu je uračunat i PDV)<br />
+          Uplate za učešće u programima možete izvršiti na<strong> žiro račun:</strong> 840 – 629667 - 08, <strong>poziv na broj:</strong> 24L, 
+          <strong>svrha uplate:</strong> „kotizacija za osnovni program“.</p>
+        <p>Za učesnike iz regiona kotizacija se plaća na licu mesta.</strong></p>
+	      <p><strong>Tehnička podrška za uplate kotizacija:</strong><br />
+		    referent Jasna Pavlović:  011/20 60 655, e-mail:jasna.pavlovic@udk.bg.ac.rs</p>
+        <p><strong>Kontakt e-mail:</strong> dani2022@udk.bg.ac.rs</p>
+	    </div>
     </td>
   </tr>
-  <tr class="style3">
+  <tr>
     <td colspan="3">&nbsp;</td>
   </tr>
   
-  <tr class="style3">
+  <tr>
     <td colspan="3">&nbsp;</td>
   </tr>
 </table>
 
-
 </form>
 <!-- <a href="index.php">Back to home</a> -->
+</div>
 
 <?php require "templates/footer.php"; ?>
