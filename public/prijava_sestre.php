@@ -37,7 +37,7 @@ try  {
 }
 ?>
 
-<?php require "templates/header.php"; ?>
+<?php require "templates/header_sestre.php"; ?>
 
 <div class="w3-container">
 <?php if (isset($_POST['submit']) && $statement) { ?>
@@ -68,13 +68,13 @@ try  {
     <td>*</td>
   </tr>
    <tr>
-    <td width="20" class="w3-right-align w3-text-brown">&nbsp; </td>
-    <td width="220"><input class="w3-input w3-border" name="ustanova" type="text" placeholder="Ustanova"> </td>
+    <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
+    <td width="220"><input class="w3-input w3-border" name="ustanova" type="text" placeholder="Ustanova"></td>
     <td>*</td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="adresa" type="text" placeholder="Adresa"> </td>
+    <td width="220"><input class="w3-input w3-border" name="adresa" type="text" placeholder="Adresa"></td>
     <td>*</td>
   </tr>
   <tr>
@@ -93,8 +93,10 @@ try  {
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td  width="20" class="w3-right-align w3-text-brown">Prijava za kurs (do 50 učesnika)&nbsp;</td>
-    <td  width="220" style="text-align: left"><input type="checkbox" name="kurs" value="+"></td>
+    <td  width="20" class="w3-right-align w3-text-brown">Prijava za kurs&nbsp;<br />(do 50 učesnika)&nbsp;</td>
+    <td  width="220" style="text-align: left">
+          &nbsp;<input type="radio" name="kurs" value="+"><label for="+">&nbsp;da</label><br />
+          &nbsp;<input type="radio" name="kurs" value="-"><label for="-">&nbsp;ne</label>&nbsp;*</td>
   </tr>
   <tr>
     <td width="20">&nbsp;</td>
@@ -125,14 +127,17 @@ try  {
   <tr>
     <td colspan="3">
       <div class="w3-panel w3-orange w3-round-large">
-		   <h5> <strong>INFORMACIJE O PLAĆANJU</strong></h5>
-		   <p>Glavni program: 9600 dinara (u cenu je uračunat i PDV)<br />
-          Uplate za učešće u programima možete izvršiti na<strong> žiro račun:</strong> 840 – 629667 - 08, <strong>poziv na broj:</strong> 24L, 
-          <strong>svrha uplate:</strong> „kotizacija za osnovni program“.</p>
+		    <h5> <strong>INFORMACIJE O PLAĆANJU</strong></h5>
+		    <p><strong>Glavni program:</strong> 2000 dinara (u cenu je uračunat i PDV)<br />
+          Uplate za učešće u glavnom programima možete izvršiti na<strong> žiro račun:</strong> 840 – 629667 - 08, <strong>poziv na broj:</strong> S2022, 
+          <strong>svrha uplate:</strong> „kotizacija za glavni program“.</p>
+          <p><strong>Nacionalni kurs:</strong> 1500 dinara (u cenu je uračunat i PDV)<br />
+          Uplate za učešće u programima možete izvršiti na<strong> žiro račun:</strong> 840 – 629667 - 08, <strong>poziv na broj:</strong> SK2022, 
+          <strong>svrha uplate:</strong> „kotizacija za nacionalni kurs“.</p>
         <p>Za učesnike iz regiona kotizacija se plaća na licu mesta.</strong></p>
-	      <p><strong>Tehnička podrška za uplate kotizacija:</strong><br />
+	      <p><strong>Tehnička podrška za uplatu kotizacija:</strong><br />
 		    referent Jasna Pavlović:  011/20 60 655, e-mail:jasna.pavlovic@udk.bg.ac.rs</p>
-        <p><strong>Kontakt e-mail:</strong> dani2022@udk.bg.ac.rs</p>
+        <p><strong>Kontakt e-mail:</strong> sofija.alijevic@udk.bg.ac.rs</p>
 	    </div>
     </td>
   </tr>

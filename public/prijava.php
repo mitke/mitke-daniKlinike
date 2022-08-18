@@ -75,7 +75,7 @@ try  {
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
     <td width="220"><input name="licenca" class="w3-input w3-border" type=text" placeholder="Broj licence"></td>
-    <td>*</td>
+    <td></td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp; </td>

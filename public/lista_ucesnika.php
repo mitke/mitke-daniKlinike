@@ -64,9 +64,9 @@ foreach( $zan as $z ) {
              "</tr></td>";
     }
  } 
-  else {
-    echo "0 results";
- } 
+    /* else {
+     echo "0 results";
+    } */ 
 }
 $conn->close();
 ?>

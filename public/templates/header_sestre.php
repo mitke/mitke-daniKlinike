@@ -24,7 +24,8 @@ if (document.forms["form_prijava"]["ime"].value.trim() == ""
   ||document.forms["form_prijava"]["ustanova"].value.trim() == "" 
   ||document.forms["form_prijava"]["adresa"].value.trim() == "" 
   ||document.forms["form_prijava"]["telefon"].value.trim() == "" 
-  ||document.forms["form_prijava"]["email"].value.trim() == "") 
+  ||document.forms["form_prijava"]["email"].value.trim() == ""
+  ||document.forms["form_prijava"]["kurs"].value.trim() == "") 
   {
   alert("Niste uneli obavezna polja!!!");
   return false;
