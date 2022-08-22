@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Use an HTML form to create a new entry in the
- * users table.
- *
- */
-
 if (isset($_POST['submit'])) {
     require "../config.php";
     require "../common.php";
@@ -48,7 +42,7 @@ try  {
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td colspan="3"><div class="w3-panel w3-orange w3-round-large"><h3>Prijava učesnika za dane Univerzitetske dečje klinike 2022.</h3></div> </td>
+    <td colspan="3"><div class="w3-panel w3-orange w3-round-large"><h3>Prijava medicinskih sestara i tehničara za Dane Univerzitetske dečje klinike 2022.</h3></div> </td>
   </tr>
   
   <tr>
@@ -58,33 +52,33 @@ try  {
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="ime" type="text" placeholder="Ime"></td>
+    <td width="220"><input class="w3-input w3-border" name="ime" type="text" placeholder="Ime" id="id_ime"></td>
     <td>*</td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="prezime" type="text" placeholder="Prezime">
+    <td width="220"><input class="w3-input w3-border" name="prezime" type="text" placeholder="Prezime" id="id_prezime">
                     <input name="zanimanje" type="hidden" size="30" value="sestre"></td>
     <td>*</td>
   </tr>
    <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="ustanova" type="text" placeholder="Ustanova"></td>
+    <td width="220"><input class="w3-input w3-border" name="ustanova" type="text" placeholder="Ustanova" id="id_ustanova"></td>
     <td>*</td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="adresa" type="text" placeholder="Adresa"></td>
+    <td width="220"><input class="w3-input w3-border" name="adresa" type="text" placeholder="Adresa" id="id_adresa"></td>
     <td>*</td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="telefon" type="text" placeholder="Telefon"></td>
+    <td width="220"><input class="w3-input w3-border" name="telefon" type="text" placeholder="Telefon" id="id_telefon"></td>
     <td>*</td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="email" type="text" placeholder="e-mail adresa"></td>
+    <td width="220"><input class="w3-input w3-border" name="email" type="text" placeholder="e-mail adresa" id="id_email"></td>
     <td>*</td>
   </tr>
   <tr>
@@ -95,7 +89,7 @@ try  {
   <tr>
     <td  width="20" class="w3-right-align w3-text-brown">Prijava za kurs&nbsp;<br />(do 50 učesnika)&nbsp;</td>
     <td  width="220" style="text-align: left">
-          &nbsp;<input type="radio" name="kurs" value="+"><label for="+">&nbsp;da</label><br />
+          &nbsp;<input type="radio" name="kurs" value="+" id="id_kurs"><label for="+">&nbsp;da</label><br />
           &nbsp;<input type="radio" name="kurs" value="-"><label for="-">&nbsp;ne</label>&nbsp;*</td>
   </tr>
   <tr>
