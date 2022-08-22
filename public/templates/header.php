@@ -61,6 +61,7 @@ if (document.forms["form_prijava"]["telefon"].value.trim() == "")
     return false; 
   }
 
+/*i
 var telExp = /^0\d{7,9}$/; 
 if (!document.forms["form_prijava"]["telefon"].value.match(telExp))
   {
@@ -68,7 +69,7 @@ if (!document.forms["form_prijava"]["telefon"].value.match(telExp))
     document.getElementById("id_telefon").focus();
     return false;
   }
-
+*/
 if (document.forms["form_prijava"]["email"].value.trim() == "")
   {
     alert("Vaša email adressa je obavezno polje!!!");
