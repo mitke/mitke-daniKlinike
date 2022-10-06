@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Use an HTML form to create a new entry in the
+ * users table.
+ *
+ */
+
 if (isset($_POST['submit'])) {
     require "../config.php";
     require "../common.php";
@@ -8,13 +14,13 @@ try  {
  $connection = new PDO($dsn, $username, $password, $options);
  $new_user = array(
             "ime"	=> $_POST['ime'],
-            "prezime"	=> $_POST['prezime'],            
+            "prezime"	=> $_POST['prezime'],
+            "licenca" => $_POST['licenca'],
             "zanimanje"	=> $_POST['zanimanje'],
             "email"	=> $_POST['email'],
             "ustanova"	=> $_POST['ustanova'],
             "adresa"	=> $_POST['adresa'],
             "telefon"	=> $_POST['telefon'],
-            "licenca" => $_POST['licenca'],
             "placanje" => $_POST['placanje'],
             "r1" => $_POST['r1'],
             "r2" => $_POST['r2'],
@@ -40,14 +46,14 @@ try  {
 
 <div class="w3-container">
 <?php if (isset($_POST['submit']) && $statement) { ?>
-<p class="w3-panel w3-brown w3-round"><strong><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a</strong></p>
+<p class="w3-panel w3-deep-orange w3-round w3-padding-36"><strong><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a</strong></p>
 <?php } ?>
 
 <form name="form_prijava" onsubmit="return provera()" method="post" >
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td colspan="3"><div class="w3-panel w3-orange w3-round-large"><h3>Prijava učesnika za dane Univerzitetske dečje klinike 2022.</h3></div> </td>
+    <td colspan="3"><div class="w3-panel w3-orange w3-round-32"><h3>Prijava učesnika za dane Univerzitetske dečje klinike 2022.</h3></div> </td>
   </tr>
 
   <tr>
@@ -57,38 +63,38 @@ try  {
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="ime" type="text" placeholder="Ime" id="id_ime"></td>
+    <td width="220"><input class="w3-input w3-border" name="ime" type="text" placeholder="Ime"></td>
     <td>*</td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="prezime" type="text" placeholder="Prezime" id="id_prezime">
+    <td width="220"><input class="w3-input w3-border" name="prezime" type="text" placeholder="Prezime">
     	              <input name="zanimanje" type="hidden" size="30" value="doktori"></td>
     <td>*</td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input name="licenca" class="w3-input w3-border" type=text" placeholder="Broj licence" id="id_licenca"></td>
+    <td width="220"><input name="licenca" class="w3-input w3-border" type=text" placeholder="Broj licence"></td>
     <td></td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp; </td>
-    <td width="220"><input class="w3-input w3-border" name="ustanova" type="text" placeholder="Ustanova" id="id_ustanova"> </td>
+    <td width="220"><input class="w3-input w3-border" name="ustanova" type="text" placeholder="Ustanova"> </td>
     <td>*</td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="adresa" type="text" placeholder="Adresa" id="id_adresa"> </td>
+    <td width="220"><input class="w3-input w3-border" name="adresa" type="text" placeholder="Adresa"> </td>
     <td>*</td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="telefon" type="text" placeholder="Telefon" id="id_telefon"></td>
+    <td width="220"><input class="w3-input w3-border" name="telefon" type="text" placeholder="Telefon"></td>
     <td>*</td>
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="email" type="text" placeholder="e-mail adresa" id="id_email"></td>
+    <td width="220"><input class="w3-input w3-border" name="email" type="text" placeholder="e-mail adresa"></td>
     <td>*</td>
   </tr>
   <tr>
@@ -157,7 +163,7 @@ try  {
     <td colspan="3">
       <div class="w3-panel w3-orange w3-round-large">
 		   <h5> <strong>INFORMACIJE O PLAĆANJU</strong></h5>
-		   <p>Glavni program: 9600 dinara (u cenu je uračunat i PDV)<br />
+		   <p>Glavni program: 9000 dinara (u cenu je uračunat i PDV)<br />
           Uplate za učešće u programima možete izvršiti na<strong> žiro račun:</strong> 840 – 629667 - 08, <strong>poziv na broj:</strong> 24L, 
           <strong>svrha uplate:</strong> „kotizacija za osnovni program“.</p>
         <p>Za učesnike iz regiona kotizacija se plaća na licu mesta.</strong></p>

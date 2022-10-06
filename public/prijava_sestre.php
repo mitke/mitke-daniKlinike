@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Use an HTML form to create a new entry in the
+ * users table.
+ *
+ */
+
 if (isset($_POST['submit'])) {
     require "../config.php";
     require "../common.php";
@@ -35,14 +41,14 @@ try  {
 
 <div class="w3-container">
 <?php if (isset($_POST['submit']) && $statement) { ?>
-<p class="w3-panel w3-brown w3-round"><strong><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a.</p></strong>
+<p class="w3-panel w3-deep-orange w3-round w3-padding-32"><strong><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a.</p></strong>
 <?php } ?>
 
 <form name="form_prijava" onsubmit="return provera()" method="post" >
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td colspan="3"><div class="w3-panel w3-orange w3-round-large"><h3>Prijava medicinskih sestara i tehničara za Dane Univerzitetske dečje klinike 2022.</h3></div> </td>
+    <td colspan="3"><div class="w3-panel w3-orange w3-round-large"><h3>Prijava učesnika za dane Univerzitetske dečje klinike 2022.</h3></div> </td>
   </tr>
   
   <tr>
@@ -78,7 +84,7 @@ try  {
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="email" type="text" placeholder="e-mail adresa" id="id_email"></td>
+    <td width="220"><input class="w3-input w3-border" name="email" type="email" placeholder="e-mail adresa" id="id_email"></td>
     <td>*</td>
   </tr>
   <tr>
