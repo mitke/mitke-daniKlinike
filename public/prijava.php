@@ -94,7 +94,7 @@ try  {
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="email" type="text" placeholder="e-mail adresa"></td>
+    <td width="220"><input class="w3-input w3-border" name="email" type="email" placeholder="e-mail adresa"></td>
     <td>*</td>
   </tr>
   <tr>
