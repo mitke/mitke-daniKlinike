@@ -46,14 +46,14 @@ try  {
 
 <div class="w3-container">
 <?php if (isset($_POST['submit']) && $statement) { ?>
-<p class="w3-panel w3-brown w3-round"><strong><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a</strong></p>
+<p class="w3-panel w3-deep-orange w3-round w3-padding-32"><strong><?php echo $_POST['ime'], " ", $_POST['prezime']; ?> je uspešno prijavljen/a</strong></p>
 <?php } ?>
 
 <form name="form_prijava" onsubmit="return provera()" method="post" >
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td colspan="3"><div class="w3-panel w3-orange w3-round-large"><h3>Prijava učesnika za dane Univerzitetske dečje klinike 2022.</h3></div> </td>
+    <td colspan="3"><div class="w3-panel w3-orange w3-round-32"><h3>Prijava učesnika za dane Univerzitetske dečje klinike 2022.</h3></div> </td>
   </tr>
 
   <tr>
@@ -94,7 +94,7 @@ try  {
   </tr>
   <tr>
     <td width="20" class="w3-right-align w3-text-brown">&nbsp;</td>
-    <td width="220"><input class="w3-input w3-border" name="email" type="text" placeholder="e-mail adresa"></td>
+    <td width="220"><input class="w3-input w3-border" name="email" type="email" placeholder="e-mail adresa"></td>
     <td>*</td>
   </tr>
   <tr>
@@ -163,7 +163,7 @@ try  {
     <td colspan="3">
       <div class="w3-panel w3-orange w3-round-large">
 		   <h5> <strong>INFORMACIJE O PLAĆANJU</strong></h5>
-		   <p>Glavni program: 9600 dinara (u cenu je uračunat i PDV)<br />
+		   <p>Glavni program: 9000 dinara (u cenu je uračunat i PDV)<br />
           Uplate za učešće u programima možete izvršiti na<strong> žiro račun:</strong> 840 – 629667 - 08, <strong>poziv na broj:</strong> 24L, 
           <strong>svrha uplate:</strong> „kotizacija za osnovni program“.</p>
         <p>Za učesnike iz regiona kotizacija se plaća na licu mesta.</strong></p>
